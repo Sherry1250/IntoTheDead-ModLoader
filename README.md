@@ -85,7 +85,6 @@ dnlib 的 `Name` 是 `UTF8String`，拼接前必须 `[string]` 强转，否则�
 
 - 游戏本体及其资源、代码、反编译程序集
 - MoonSweepers ModEngine（闭源，请到其发布页自行下载）
-- .NET 运行时（请从微软官方渠道获取）
 
 ## 免责声明
 
@@ -96,3 +95,38 @@ dnlib 的 `Name` 是 `UTF8String`，拼接前必须 `[string]` 强转，否则�
 ## License
 
 MIT
+
+
+## Source of the distributed plugin
+
+The file `BepInEx/plugins/ITD_AutoDodge.dll` distributed in the Nexus release
+(DeadSight Menu - Combat Assist 1.0.0) is built from this repository:
+`src/AutoDodge/Plugin.cs` + `src/AutoDodge/ITD_AutoDodge.csproj`.
+
+Build steps:
+
+1. Install the game and run it once through Steam, so that `BepInEx/interop/`
+   and `BepInEx/dummy/` are generated (see the installation section above).
+2. Set the BepInEx folder of your own installation:
+   `dotnet build src/AutoDodge/ITD_AutoDodge.csproj -c Release -p:BepInExRoot="<your game folder>\BepInEx"`
+   or edit the `<BepInExRoot>` property in `ITD_AutoDodge.csproj` directly.
+3. The output `src/AutoDodge/bin/Release/ITD_AutoDodge.dll` is the plugin that
+   ships in the release archive.
+
+## Bundled runtime note
+
+The Nexus archive bundles the .NET 6 runtime in `dotnet/` so that users can run
+the mod out of the box, without installing .NET themselves. It contains no
+installer and writes nothing to the registry. It is the runtime required by the
+BepInEx 6.0.0-be.791 Unity.IL2CPP build. Users who already have .NET 6 can delete
+the folder.
+
+## Third-party components in the release archive
+
+- BepInEx 6.0.0-be.791 — LGPL-2.1 — https://github.com/BepInEx/BepInEx
+- MoonSweepers ModEngine (IL2CPP v107 compatibility patcher) — closed source,
+  redistributed from its official release page
+- .NET 6 runtime — MIT — https://github.com/dotnet/runtime
+
+No game files, no decompiled game assemblies and no game assets are included
+anywhere in this repository or in the release archive.
