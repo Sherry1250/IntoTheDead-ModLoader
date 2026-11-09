@@ -1,0 +1,94 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>ITD_AutoDodge</AssemblyName>
+    <RootNamespace>ITD_AutoDodge</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>CS0649;CS0169;CS8632</NoWarn>
+    <BepInExRoot>D:\steam\steamapps\common\Into the Dead Our Darkest Days\BepInEx</BepInExRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BepInEx.Core">
+      <HintPath>$(BepInExRoot)\core\BepInEx.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>$(BepInExRoot)\core\BepInEx.Unity.IL2CPP.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(BepInExRoot)\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>$(BepInExRoot)\core\Il2CppInterop.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DRS.Game">
+      <HintPath>$(BepInExRoot)\interop\DRS.Game.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DRS.Static">
+      <HintPath>$(BepInExRoot)\interop\DRS.Static.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DRS.Model">
+      <HintPath>$(BepInExRoot)\interop\DRS.Model.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DRS.Game.Input">
+      <HintPath>$(BepInExRoot)\interop\DRS.Game.Input.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DRS.Presentation">
+      <HintPath>$(BepInExRoot)\interop\DRS.Presentation.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PikPok.TreeFlowManager">
+      <HintPath>$(BepInExRoot)\interop\PikPok.TreeFlowManager.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PikPok.Core">
+      <HintPath>$(BepInExRoot)\interop\PikPok.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(BepInExRoot)\interop\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(BepInExRoot)\interop\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(BepInExRoot)\interop\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(BepInExRoot)\interop\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(BepInExRoot)\interop\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(BepInExRoot)\interop\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(BepInExRoot)\interop\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>$(BepInExRoot)\interop\Unity.InputSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>$(BepInExRoot)\interop\Il2Cppmscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
